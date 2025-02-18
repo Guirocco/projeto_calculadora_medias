@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', serif;
+}
+
+@keyframes chameleon {
+    0% { background: #ff0000; }
+    20% { background: #ff7300; }
+    40% { background: #ffeb00; }
+    60% { background: #47ff00; }
+    80% { background: #00ffee; }
+    100% { background: #2b65ff; }
+}
+
+body {
+    animation: chameleon 9s infinite alternate;
+    padding: 170px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header img {
+    height: 36px;
+    margin-right: 16px;
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 35px;
+    border: 5px solid #000;
+    border-radius: 10px;
+    background: beige;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.9);
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+form input {
+    font-size: 20px;
+    background-color: #ffffff;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    width: calc(50% - 20px);
+    min-width: 200px;
+    text-align: center;
+    padding: 5px;
+}
+
+
+form button {
+    background-color: #009432;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    border: 3px solid #009432;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    padding: 5px;
+    transition: background-color 0.3s ease-in-out;
+    display: block;
+    margin: 0 auto;
+}
+
+button:hover {
+    background-color: #01501b;
+}
+
+input:focus-visible {
+    border: 3px solid #009432;
+    background-color: #ffffff;
+    outline: none;
+}
+
+table th {
+    border-bottom: 2px solid #000;
+    padding: 48px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+}
+
+table td {
+    padding: 16px 0;
+    text-align: center;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+table td img {
+    height: 30px;
+}
+
+.resultado {
+    padding: 8px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #000;
+    border-radius: 3px;
+}
+
+.aprovado {
+    background-color: #009432;
+}
+
+.reprovado {
+    background-color: red;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    
+    form {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    form input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    form button {
+        width: 100%;
+    }
+}
